@@ -6,4 +6,8 @@
         - @article.errors.full_messages.each do |message|
           li = message
 
-  .actions = f.submit
+  .field
+  	.control
+  		= f.text_field :url, :required => true, :class => "input"
+
+  .actions = f.submit :class => "button is-primary"

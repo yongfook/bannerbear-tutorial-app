@@ -1,4 +1,4 @@
-h1 Listing articles
+h1.title Listing articles
 
 table
   thead
@@ -9,6 +9,8 @@ table
 
   tbody
     - @articles.each do |article|
+      tr
+        td colspan="3" #{article.url}
       tr
         td = link_to 'Show', article
         td = link_to 'Edit', edit_article_path(article)
